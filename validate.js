@@ -1,10 +1,6 @@
 function checkSID() {
-  let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
-    return false;
-  }
+  let sid = document.getElementById("sid").value.trim();
+  return /^[0-9]{10}$/.test(sid);
 }
 
 function checkCandiNo() {
